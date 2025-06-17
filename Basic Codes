@@ -1,0 +1,107 @@
+1) Reverse the number :
+
+import java.util.*;
+public class reverse {
+    public static void main(String arg[]){
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter the number : ");
+
+
+       int n = sc.nextInt();
+
+       int rev =0 ;
+       while (n>0){
+        int LastDigit= n%10;
+        rev = (rev*10) + LastDigit;
+        n = n/10;;
+       }
+       System.out.println(rev);
+       
+    }   
+}
+
+
+2) Polindrome 
+
+import java.util.*;
+public class basicString {
+
+    public static boolean isPolindrome(String str){
+         int n = str.length();
+        for(int i = 0 ; i<n/2; i++){
+            if(str.charAt(i) == str.charAt(n-1-i)){
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String args[]){
+
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter the Word:");
+        String str = sc.next();
+
+        System.out.println(isPolindrome(str));
+
+    }
+}
+
+3)Factorial of given number 
+
+Factorial of a number 
+
+import java.util.Scanner;
+public class factorial{
+    public static void main (String[] args){
+        Scanner sc = new Scanner (System.in);
+       
+        int num;
+        int fact =1;
+
+        System.out.println("Enter the number : ");
+        num = sc.nextInt();
+
+        for(int i=1; i<=num ; i++){
+
+            fact*=i;
+        }
+        System.out.println("The factorial is : "+fact);
+         
+        }
+    };
+4) Simple Calculator
+
+ Simple Calculator + ,- ,/, *,  %
+
+import java.util.*;
+public class calculator {
+    public static void main(String args[]){
+
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter num a: ");
+        int a = sc.nextInt();
+        System.out.println("Enter num b: ");
+        int b =sc.nextInt();
+        System.out.println("Enter operator: ");
+        char operator= sc.next().charAt(0);
+
+
+        switch(operator) {
+            case '+' : System.out.println(a+b);
+                      break;
+            case '-' : System.out.println(a-b);
+                      break;
+            case '*' : System.out.println(a*b);
+                      break;
+            case '/' : System.out.println(a/b);
+                      break;
+            case '%' : System.out.println(a%b);
+                      break;
+            default : System.out.println(operator);
+
+        }
+
+    }
+}
